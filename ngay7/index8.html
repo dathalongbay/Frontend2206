@@ -34,6 +34,27 @@
             alert(c);
         }
 
+        document.getElementById('hieu').onclick = function() {
+            var a = document.getElementById('idA').value;
+            var b = document.getElementById('idB').value;
+            var c = parseFloat(a) - parseFloat(b);
+            alert(c);
+        }
+
+        document.getElementById('tich').onclick = function() {
+            var a = document.getElementById('idA').value;
+            var b = document.getElementById('idB').value;
+            var c = parseFloat(a) * parseFloat(b);
+            alert(c);
+        }
+
+        document.getElementById('thuong').onclick = function() {
+            var a = document.getElementById('idA').value;
+            var b = document.getElementById('idB').value;
+            var c = parseFloat(a) / parseFloat(b);
+            alert(c);
+        }
+
     </script>
 
 </body>
