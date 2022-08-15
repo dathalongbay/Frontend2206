@@ -31,14 +31,39 @@
 
     <script>
         function tinhTien() {
+            var day = document.getElementById('day').value;
+            day = parseFloat(day);
             var room_type = document.getElementById('room_type').value;
-            alert(room_type);
-
+            //room_type = parseInt(room_type);
+            
             // tính tiền thuê phòng 
             // biết giá thuê phòng đơn là 100 nghìn
             // biết giá thuê phòng đôi là 200 nghìn
             // biết giá thuê phòng vip là 500 nghìn
             // biết giá thuê phòng đặc biệt là 1 triệu
+            var price = 0;
+            switch(room_type) {
+                case '1': 
+                    price = 100000;
+                    break;
+                case '2': 
+                    price = 200000;
+                    break; 
+                case '3': 
+                    price = 500000;
+                    break;
+                case '4': 
+                    price = 1000000;
+                    break;
+                default: 
+                    alert('loại phòng không hợp lệ');    
+            }
+
+            day = Math.ceil(day);
+            var total = 0;
+            total = day*price;
+            alert('bạn phải thanh toán : ' + total);
+
 
             // nếu lẻ ngày ví dụ 3.1 thì tính là 4 ngày 
 
@@ -50,6 +75,7 @@
             // 3.1 tính tiền là 4 ngày 
 
         }
+
     </script>
     
 </body>
