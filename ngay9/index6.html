@@ -29,6 +29,14 @@
 
         // dùng vòng lăp do ... while 
         // 1922 - 2022
+
+        var y = 1922;
+        var option = '';
+        do {
+            option += '<option value="'+y+'">' + 'năm ' + y + '</option>';
+            y++;
+        }while(y <= 2022);
+        document.getElementById('nam').innerHTML = option;
     </script>
 </body>
 </html>
