@@ -11,6 +11,16 @@
     <script>
         // viết vòng lặp for tính tổng các số từ 1 đến 100 nhưng số đó phải chia hết cho 3 
         
+        var tong = 0;
+        for(var a=1;a <= 100; a++) {
+            if ( (a % 3) == 0 ) {
+                //tong = tong + a;
+                tong += a;
+            }
+        }
+
+        alert(tong);
+
     </script>
 </body>
 </html>
