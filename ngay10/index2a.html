@@ -35,13 +35,23 @@
 </div>
 
 <script>
+
+  // biến có phạm vi toàn cục 
+  var cities = [];
+  
   function add() {
+    // biến đc khai báo trong function phạm vi là cục bộ
     let new_city = document.getElementById('new-city').value;
     new_city = new_city.trim();
-    var cities = [];
-    if (new_city.length > 0) {
-      cities.push(new_city);
 
+    if (new_city.length > 0) {
+
+      if (!cities.includes(new_city)) {
+        cities.push(new_city);
+      } else {
+        alert('duplicate city');
+      }
+      document.getElementById('new-city').value = '';
       var htmlTable = '';
       if (cities.length) {
           for(var i = 0;i < cities.length; i++) {
