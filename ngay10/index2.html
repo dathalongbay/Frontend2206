@@ -41,8 +41,20 @@
 </div>
 
 <script>
-    var cities = ['hà nội', 'hồ chí minh'];
-    
+    var cities = ['hà nội', 'hồ chí minh', 'đà nẵng'];
+
+    var htmlTable = '';
+    if (cities.length) {
+        for(var i = 0;i < cities.length; i++) {
+            htmlTable += '<tr>';
+                htmlTable += '<td>'+(i+1)+'</td>';
+                htmlTable += '<td>'+cities[i]+'</td>';
+                htmlTable += '<td><button class="btn btn-danger">Xóa</button></td>';
+            htmlTable += '</tr>';
+        }
+        document.getElementById('list-city').innerHTML = htmlTable;
+    }
+
 
 </script>
 
